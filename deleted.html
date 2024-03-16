@@ -4,7 +4,6 @@
 <head>
     <title>Screen-Aid</title>
     <meta name="comp1800 template" content="My 1800 App">
-    <link rel="stylesheet" href="style.css">
 
     <!-- Required meta tags --> 
     <meta charset="utf-8">
@@ -30,7 +29,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="icons8-laptop-and-phone-45.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          <img src="screenaid.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
           Screen Aid!
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,37 +63,44 @@
         </div>
       </div>
     </nav>
-
-    <!-- Your HTML Layout goes here -->
-    <div class="p-5 mb-4 bg-light rounded-3">
-        <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold"> Welcome to Screen AID!</h1>
-            <p class="col-md-8 fs-4">The AID to reducing your screentime.</p>
-
-            <button class="btn btn-primary btn-lg" type="button">Login/Signup</button>
-            <!-- Add an onclick attribute to define click event handler -->
-            <!-- <button onclick="window.location.href='login.html'" class="btn btn-primary btn-lg" type="button">Login/Signup</button> -->
-        </div>
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="true" href="tasks.html">All</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="starred.html">Starred</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-disabled="true" href="deleted.html">Deleted</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Your Deleted Tasks</h5>
+         
+      </div>
     </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+        <label class="form-check-label" for="firstCheckbox">First Task (deleted)</label>
+      </li>
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+        <label class="form-check-label" for="secondCheckbox">Second Task (deleted)</label>
+      </li>
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+        <label class="form-check-label" for="thirdCheckbox">Third Task (deleted)</label>
+      </li>
+    </ul>
+    
+    <!-- Your HTML Layout goes here -->
+
 
     <!-- Your own JavaScript functions go here -->
-          <h1 class="display-5 fw-bold"> Welcome to Screen AID!</h1>
-          <p class="col-md-8 fs-4">The AID to reducing your screentime.</p>
-  
-          <button class="btn btn-primary btn-lg" type="button">Login/Signup</button>
-          
-          <!-- Add an onclick attribute to define click event handler -->
-          <!-- <button onclick="window.location.href='login.html'" class="btn btn-primary btn-lg" type="button">Login/Signup</button> -->
-        </div>
-  </div>
-  <div class="fixed-bottom py-3 bg-info">
-    <div class="container text-center">
-        All rights reserved. 2024.
-    </div>
-</div>
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
 
     <!-- Link to scripts of your own -->
     <!-- <script src="./scripts/script.js"></script> -->
