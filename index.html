@@ -26,51 +26,48 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="screenaid.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                Screen Aid!
+
+  <nav id="navbarPlaceholder"></nav>
+
+  <!-- 
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="icons8-laptop-and-phone-45.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Screen Aid!
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="timer.html">Timer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tasks.html">Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="analytics.html">Analytics</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Other
             </a>
-        </div>
-    </nav> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="icons8-laptop-and-phone-45.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-          Screen Aid!
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="timer.html">Timer</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tasks.html">Tasks</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="analytics.html">Analytics</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Other
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
-                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav> -->
+
 
     <!-- Your HTML Layout goes here -->
     <div class="p-5 mb-4 bg-light rounded-3">
@@ -103,13 +100,16 @@
     <script src="./scripts/firebaseAPI_key.js"></script>
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script>
+      logout();       //make sure user is logged out
+</script>
 
 </body>
-<!-- Footer -->
-<!-- <footer class="footer bg-light text-center">
-  <div class="container">
-      Footer
+<div class="fixed-bottom py-3 bg-info">
+  <div class="container text-center">
+      All rights reserved. 2024.
   </div>
-</footer> -->
+</div>
 
 </html>
