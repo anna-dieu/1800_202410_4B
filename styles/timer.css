@@ -127,6 +127,17 @@ body{
     margin-left:200px;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+}
 
+.heading{
+    grid-row: 1;
+}
 
+.time_recorder{
+    grid-row:2;
+}
 
