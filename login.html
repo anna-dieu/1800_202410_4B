@@ -4,8 +4,9 @@
 <head>
     <title>Screen-Aid</title>
     <meta name="comp1800 template" content="My 1800 App">
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Required meta tags --> 
+    <!-- Required meta tags ---> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -65,63 +66,39 @@
       </div>
     </nav> -->
 
-    <div class="card text-center">
-      <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="true" href="#">All</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="starred.html">Starred</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="true" href="deleted.html">Deleted</a>
-          </li>
-        </ul>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Your Tasks</h5>
-        <br> 
-        <p> Click on the timer icon to start your selected task.</p>
-         
-      </div>
-    </div>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-        <label class="form-check-label" for="firstCheckbox">First Task</label>
-        <a href="timer.html">
-          <img src="icons8-clock-30.png" height="17px" width="17px" alt="timer">
-        </a>
-
-
-      </li>
-      <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-        <label class="form-check-label" for="secondCheckbox">Second Task</label>
-        <a href="timer.html">
-          <img src="icons8-clock-30.png" height="17px" width="17px" alt="timer">
-        </a>
-      </li>
-      <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-        <label class="form-check-label" for="thirdCheckbox">Third Task</label>
-        <a href="timer.html">
-          <img src="icons8-clock-30.png" height="17px" width="17px" alt="timer">
-        </a>
-      </li>
-    </ul>
-    
     <!-- Your HTML Layout goes here -->
-
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <div class="container">
+            <h1>Let's Login!</h1>
+        </div>
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+            <!-- Add an onclick attribute to define click event handler -->
+            <!-- <button onclick="window.location.href='login.html'" class="btn btn-primary btn-lg" type="button">Login/Signup</button> -->
+        </div>
+    </div>
 
     <!-- Your own JavaScript functions go here -->
+          <!-- Add an onclick attribute to define click event handler -->
+          <!-- <button onclick="window.location.href='login.html'" class="btn btn-primary btn-lg" type="button">Login/Signup</button> -->
+        </div>
+  </div>
+  <div class="fixed-bottom py-3 bg-info">
+    <div class="container text-center">
+        All rights reserved. 2024.
+    </div>
+</div>
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
 
     <!-- Link to scripts of your own -->
     <!-- <script src="./scripts/script.js"></script> -->
     <script src="./scripts/firebaseAPI_key.js"></script>
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/authentication.js"></script>
     <script src="./scripts/script.js"></script>
 
 

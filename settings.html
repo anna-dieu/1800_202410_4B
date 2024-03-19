@@ -13,20 +13,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Library JS CDN go here --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <nav id="navbarPlaceholder"></nav>
+
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="screenaid.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                Screen Aid!
-            </a>
-        </div>
-    </nav> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="icons8-laptop-and-phone-45.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
@@ -62,7 +63,7 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
 <br>
     <!-- Your HTML Layout goes here -->
     <div class="container">
@@ -153,13 +154,17 @@
 
     <!-- Link to scripts of your own -->
     <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/firebaseAPI_key.js"></script>
+    <script src="./scripts/skeleton.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/script.js"></script>
+
 
 </body>
-<!-- Footer -->
-<!-- <footer class="footer bg-light text-center">
-  <div class="container">
-      Footer
-  </div>
-</footer> -->
+<div class="fixed-bottom py-3 bg-info">
+    <div class="container text-center">
+        All rights reserved. 2024.
+    </div>
+</div>
 
 </html>
