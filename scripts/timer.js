@@ -50,4 +50,7 @@ function displayTimer(){
     
 
 }
-
+document.getElementById("pause-timer").addEventListener("click",
+() => {
+    clearInterval(int);
+})

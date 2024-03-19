@@ -70,12 +70,16 @@ body{
     outline: none;
 }
 
+.buttons button:nth-last-child(3){
+    background-color: #f7df1e;
+}
+
 .buttons button:nth-last-child(2){
     background-color: #e35209;
 }
 
 .buttons button:nth-last-child(1){
-    background-color: #f7df1e;
+    background-color: #1ea4f7;
 }
 
 .buttons button:hover{
@@ -127,6 +131,17 @@ body{
     margin-left:200px;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+}
 
+.heading{
+    grid-row: 1;
+}
 
+.time_recorder{
+    grid-row:2;
+}
 
