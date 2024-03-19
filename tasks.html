@@ -29,44 +29,6 @@
 <body>
   <nav id="navbarPlaceholder"></nav>
 
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="icons8-laptop-and-phone-45.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-          Screen Aid!
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="timer.html">Timer</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tasks.html">Tasks</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="analytics.html">Analytics</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Other
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
-                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
-
     <div class="card text-center">
       <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
@@ -91,7 +53,8 @@
     <ul class="list-group">
       <li class="list-group-item">
         <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-        <label class="form-check-label" for="firstCheckbox">First Task</label>
+        <label class="form-check-label" for="firstCheckbox">First Task<button class="btn btn-primary position-absolute bottom-0 end-0 m-3" onclick="saveTaskDocumentIDAndRedirect()">Edit</button>
+        </label>
         <a href="timer.html">
           <img src="icons8-clock-30.png" height="17px" width="17px" alt="timer">
         </a>
@@ -125,6 +88,7 @@
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/task.js"></script>
 
 
 </body>
