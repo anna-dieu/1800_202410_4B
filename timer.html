@@ -21,6 +21,8 @@
 </head>
 
 <body>
+
+  
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -68,21 +70,15 @@
     </nav>
 
 
-    <!-- <input
-    action="action"
-    onclick="window.history.go(-1); return false;"
-    type="submit"
-    value="Cancel" -->
 
-    <button class="hBack" input action="action" onclick=window.history.go(-1); return false; type="submit" value="Cancel"> <img src="./images/icons8-back-50.png" alt="Back" style="background-color:rgb(197, 162, 162);color:rgb(197, 162, 162)" ></button> 
-    
-  
-
+    <button class="btn" onclick="history.back()"> <p> < </p></button>
 
     <div class="container">
+      
     
     <div class="heading">
       <img src="images/icons8-stopclock-100.png">
+      
       <p><i><b>Set a timer for your schedules...</b></i></p>
     </div>
     <div class="time_recorder">
@@ -97,7 +93,9 @@
           <button id="save-timer">Save</button>
         </div>
       </div>
+      
     </div>
+    
   </div>
 
   
@@ -108,7 +106,9 @@
   <!-- Your own JavaScript functions go here -->
 
     <!-- Link to scripts of your own -->
+    
     <script src="scripts/timer.js"></script> 
+    
 
 </body>
 <!-- Footer -->

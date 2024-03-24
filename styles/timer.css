@@ -147,6 +147,21 @@ body{
     grid-row:2;
 }
 
-#back{
-    
+.btn {
+    background-color: rgb(93, 93, 206);
+    height: 60px;
+    width:60px;
+    border-radius: 70%;
+    color: azure;
+    font-size: 20px;
 }
+
+.btn p{
+    font-size: 30px;
+}
+
+button:hover{
+    background-color: rgb(93, 93, 206);
+    color:azure;
+}
+
