@@ -37,10 +37,7 @@
             <a class="nav-link active" aria-current="true" href="#">All</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="starred.html">Starred</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="true" href="deleted.html">Deleted</a>
+            <a class="nav-link" href="starred.html">Completed</a>
           </li>
         </ul>
       </div>
@@ -51,8 +48,21 @@
          
       </div>
     </div>
+    <div class="task-form">
+      <input type="text" id="task" placeholder="Enter task...">
+      <select id="priority">
+          <option value="top">Top Priority</option>
+          <option value="middle">Middle Priority</option>
+          <option value="low">Less Priority</option>
+      </select>
+      <input type="date" id="deadline">
+      <button id="add-task">Add Task</button>
+  </div>
     <ul class="list-group">
-      <li class="list-group-item">
+      <div class="task-list" id="task-list">
+        <!-- Tasks will be added here dynamically -->
+    </div>
+      <!-- <li class="list-group-item">
         <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
         <label class="form-check-label" for="firstCheckbox">First Task<button class="btn btn-primary position-absolute bottom-0 end-0 m-3" onclick="saveTaskDocumentIDAndRedirect()">Edit</button>
         </label>
@@ -75,7 +85,7 @@
         <a href="timer.html">
           <img src="icons8-clock-30.png" height="17px" width="17px" alt="timer">
         </a>
-      </li>
+      </li> -->
     </ul>
     
     <!-- Your HTML Layout goes here -->
