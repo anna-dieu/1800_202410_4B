@@ -49,38 +49,58 @@ document.getElementById("pause-timer").addEventListener("click", () => {
     clearInterval(int);
 });
 
+//  make sure currentUser is logged in
+var currentUser;
+
+function populateUserInfo() {
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            currentUser = db.collection("users").doc(user.uid);
+                } else {
+            console.log("No user is signed in");
+        }
+    });
+}
+
+// Call populateUserInfo to initialize currentUser
+populateUserInfo();
+
+// Function to save timer data
 function saveUserInfo(timerValue) {
-    // Get current date
+    if (!currentUser) {
+        console.error("Current user not available");
+        return;
+    }
+
     var currentDate = new Date();
     var year = currentDate.getFullYear();
     var month = currentDate.getMonth() + 1; 
     var day = currentDate.getDate();
     var weekStart = new Date(currentDate);
-    weekStart.setDate(currentDate.getDate() - currentDate.getDay()); // Start of the current week (Sunday)
+    weekStart.setDate(currentDate.getDate() - currentDate.getDay()); 
 
-    // Prepare document paths for Firestore
-    var dailyDocPath = `users/${userId}/timer/daily/${year}-${month}-${day}`;
-    var weeklyDocPath = `users/${userId}/timer/weekly/${year}-${month}-${weekStart.getDate()}-to-${day}`;
-    var monthlyDocPath = `users/${userId}/timer/monthly/${year}-${month}`;
+    var dailyDocPath = `users/${currentUser.id}/timer/daily/${year}-${month}-${day}`;
+    var weeklyDocPath = `users/${currentUser.id}/timer/weekly/${year}-${month}-${weekStart.getDate()}-to-${day}`;
+    var monthlyDocPath = `users/${currentUser.id}/timer/monthly/${year}-${month}`;
 
-    // Update timer data in Firestore
     var batch = db.batch();
     batch.set(db.doc(dailyDocPath), { timerValue: timerValue }, { merge: true });
     batch.set(db.doc(weeklyDocPath), { timerValue: timerValue }, { merge: true });
     batch.set(db.doc(monthlyDocPath), { timerValue: timerValue }, { merge: true });
 
-    // Commit the batched write operation
     batch.commit()
         .then(() => {
             console.log("Timer data saved successfully!");
-            alert("Timer data saved successfully!"); // Show alert message
+            alert("Timer data saved successfully!"); // success
         })
         .catch(error => {
             console.error("Error saving timer data:", error);
-            alert("Error saving timer data: " + error.message); // Show alert message for error
+            alert("Error saving timer data: " + error.message); // error
         });
-
-    // Disable edit
-    document.getElementById('personalInfoFields').disabled = true;
 }
 
+// Event listener for saving timer data
+document.getElementById("save-timer").addEventListener("click", () => {
+    let formattedTime = timeRef.innerHTML.trim();
+    saveUserInfo(formattedTime); 
+});
