@@ -1,6 +1,15 @@
+const timerValues = db.collection('timer');
+
+var h;
+var m;
+var s;
+var ms;
+
 let [milliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
 let timeRef = document.querySelector(".timer-display");
 let int = null;
+
+
 
 document.getElementById("start-timer").addEventListener("click",
     () => {
@@ -24,7 +33,16 @@ document.getElementById("reset-timer").addEventListener("click",
 
 document.getElementById("save-timer").addEventListener("click",
     () => {
-        saveTimer();
+        timerValues.add({
+            hours: h,
+            minutes: m,
+            seconds: s,
+            milliseconds: ms
+        }).then(() => {
+        console.log("data added");
+        }).catch((e) =>{
+            console.error("Failed to add time", e);
+        });
     })
 
 function displayTimer() {
@@ -32,7 +50,7 @@ function displayTimer() {
     if (milliseconds == 1000) {
         milliseconds = 0;
         seconds++;
-        if (second == 60) {
+        if (seconds == 60) {
             seconds = 0;
             minutes++;
             if (minutes == 60) {
@@ -41,17 +59,16 @@ function displayTimer() {
             }
         }
     }
-    let h = hours < 10 ? "0" + hours : hours;
-    let m = minutes < 10 ? "0" + minutes : minutes;
-    let s = seconds < 10 ? "0" + seconds : seconds;
-    let ms =
+     h = hours < 10 ? "0" + hours : hours;
+     m = minutes < 10 ? "0" + minutes : minutes;
+ s = seconds < 10 ? "0" + seconds : seconds;
+     ms =
         milliseconds < 10
             ? "00" + milliseconds
             : milliseconds < 100
                 ? "0" + milliseconds
                 : milliseconds;
 
-    timeRef.innerHTML = `${h} : ${m} : ${s} : ${ms}`;
-   
+    timeRef.innerHTML = `${h} : ${m} : ${s} : ${ms}`; 
 }
 
