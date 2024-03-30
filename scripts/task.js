@@ -4,42 +4,43 @@ function getTaskName(id) {
     db.collection("tasks")
       .doc(id)
       .get()
-      .then((thisHike) => {
-        var hikeName = thisHike.data().name;
-        document.getElementById("taskName").innerHTML = hikeName;
+      .then((taskName) => {
+        var taskName = thisHike.data().name;
+        document.getElementById("task").innerHTML = task;
           });
 }
 
-function saveTaskDocumentIDAndRedirect(){
-    let params = new URL(window.location.href) //get the url from the search bar
-    let ID = params.searchParams.get("docID");
-    localStorage.setItem('taskDocID', ID);
-    window.location.href = 'edit.html';
-}
+// function saveTaskDocumentIDAndRedirect(){
+//     let params = new URL(window.location.href) //get the url from the search bar
+//     let ID = params.searchParams.get("docID");
+//     localStorage.setItem('taskDocID', ID);
+//     window.location.href = 'edit.html';
+// }
 
-function editTask() {
-    let taskTitle = document.getElementById("title").value;
-    let dueDate = document.getElementById("dueDate").value;
-    let notes = document.getElementById("notes").value;
+// function editTask() {
+//     let taskTitle = document.getElementById("title").value;
+//     let dueDate = document.getElementById("dueDate").value;
+//     let notes = document.getElementById("notes").value;
 
-    var user = firebase.auth().currentUser;
-    if (user) {
-        var currentUser = db.collection("users").doc(user.uid);
-        var userID = user.uid;
+//     var user = firebase.auth().currentUser;
+//     if (user) {
+//         var currentUser = db.collection("users").doc(user.uid);
+//         var userID = user.uid;
 
-        // Get the document for the current user.
-        db.collection("tasks").add({
-            taskDocID: taskDocID,
-            userID: userID,
-            title: hikeTitle,
-            dueDate: hikeLevel,
-            notes: hikeSeason,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        }).then(() => {
-            window.location.href = "tasks.html"; // Redirect to the thanks page
-        });
-    }
-}
+//         // Get the document for the current user.
+//         db.collection("tasks").add({
+//             taskDocID: taskDocID,
+//             userID: userID,
+//             title: hikeTitle,
+//             dueDate: hikeLevel,
+//             notes: hikeSeason,
+//             timestamp: firebase.firestore.FieldValue.serverTimestamp()
+//         }).then(() => {
+//             window.location.href = "tasks.html"; // Redirect to the thanks page
+//         });
+//     }
+// }
+var user = firebase.auth().currentUser;
 
 const taskInput = document.getElementById("task");
 const priorityInput = document.getElementById("priority");
@@ -56,8 +57,20 @@ addTaskButton.addEventListener("click", () => {
 		return; // Don't add task if task or deadline is empty
 	}
 
+    let taskName = document.getElementById("task").value;
+    let taskPriority = document.getElementById("priority").value;
+    let taskDeadline = document.getElementById("deadline").value;
 
-
+	if (user) {
+        var currentUser = db.collection("users").doc(user.uid);
+        var userID = user.uid;
+	
+    db.collection("tasks").add({
+        task: taskName,
+        priority: taskPriority,
+        deadline: taskDeadline,
+    })
+	}
 	const selectedDate = new Date(deadline);
 	const currentDate = new Date();
 
