@@ -33,17 +33,19 @@ document.getElementById("reset-timer").addEventListener("click",
 
 document.getElementById("save-timer").addEventListener("click",
     () => {
+        alert("Time saved in database!!");
         timerValues.add({
             hours: h,
             minutes: m,
             seconds: s,
             milliseconds: ms
         }).then(() => {
-        console.log("data added");
-        }).catch((e) =>{
+            console.log("data added");
+        }).catch((e) => {
             console.error("Failed to add time", e);
         });
     })
+
 
 function displayTimer() {
     milliseconds += 10;
@@ -59,16 +61,15 @@ function displayTimer() {
             }
         }
     }
-     h = hours < 10 ? "0" + hours : hours;
-     m = minutes < 10 ? "0" + minutes : minutes;
- s = seconds < 10 ? "0" + seconds : seconds;
-     ms =
+    h = hours < 10 ? "0" + hours : hours;
+    m = minutes < 10 ? "0" + minutes : minutes;
+    s = seconds < 10 ? "0" + seconds : seconds;
+    ms =
         milliseconds < 10
             ? "00" + milliseconds
             : milliseconds < 100
                 ? "0" + milliseconds
                 : milliseconds;
 
-    timeRef.innerHTML = `${h} : ${m} : ${s} : ${ms}`; 
+    timeRef.innerHTML = `${h} : ${m} : ${s} : ${ms}`;
 }
-

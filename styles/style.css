@@ -19,7 +19,7 @@
 
 .footer {
   display:flex;
-  position: fixed;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -27,12 +27,13 @@
   border-top-left-radius: 10px;
   border-top-right-radius:10px ;
   height: 7%;
+  font-size: 5px;
   
 }
 
 #last1{
   color:brown;
-  font-size: 30px;
+  font-size: 25px;
   padding-top: 5px;
   margin-right: 5px;
   margin-left:200px;
@@ -40,7 +41,7 @@
 
 #last2{
   color:brown;
-  font-size: 30px;
+  font-size: 25px;
   padding-top: 5px;
   margin-right: 5px;
   margin-left:200px;
@@ -48,7 +49,7 @@
 
 #last3{
   color:brown;
-  font-size: 30px;
+  font-size: 25px;
   padding-top: 5px;
   margin-right: 5px;
   margin-left:200px;
@@ -56,7 +57,7 @@
 
 #last4{
   color:brown;
-  font-size: 30px;
+  font-size: 25px;
   padding-top: 5px;
   margin-right: 5px;
   margin-left:200px;
