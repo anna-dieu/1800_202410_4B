@@ -9,18 +9,6 @@ button{
     font-size:25px;
 }
 
-.footer {
-    display:flex;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color:beige;
-    border-top-left-radius: 10px;
-    border-top-right-radius:10px ;
-    height: 7%;
-    
-}
 
 #last1{
     color:brown;
