@@ -24,8 +24,7 @@ var user = firebase.auth().currentUser;
         var currentUser = db.collection("users").doc(user.uid);
         var userID = user.uid;
 
-        // Get the document for the current user.
-       
+        
     db.collection("tasks").add({
         task: taskName,
         priority: taskPriority,
@@ -77,10 +76,6 @@ addTaskButton.addEventListener("click", () => {
 `;
 
 	taskList.appendChild(taskItem);
-
-	taskInput.value = "";
-	priorityInput.value = "top";
-	deadlineInput.value = "";
 
 // Replace "auth.currentUser" with your actual user authentication method
 const currentUser = auth.currentUser.uid; // Get current user ID
@@ -137,6 +132,7 @@ window.onload = function() {
 
 taskList.addEventListener("click", (event) => {
 	if (event.target.classList.contains("mark-done")) {
+    alert("Task Completed!!")
 		const taskItem = event.target.parentElement;
 		taskItem.classList.add("completedTasks");
 	taskItem.innerHTML = `
@@ -146,10 +142,35 @@ taskList.addEventListener("click", (event) => {
 		taskItem.style.display = 'none';
 	}
 
-});
+    let taskName = document.getElementById("task").value;
+    let taskPriority = document.getElementById("priority").value;
+    let taskDeadline = document.getElementById("deadline").value;
+	
+    db.collection("completedTasks").add({
+        task: taskName,
+        priority: taskPriority,
+        deadline: taskDeadline,
+    })
+  });
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 //----------------------------------------------------------
 // This function takes input param User's Firestore document pointer
 // and retrieves the "saved" array (of bookmarks) 
