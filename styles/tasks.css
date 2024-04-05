@@ -108,3 +108,8 @@ main {
 	border-radius: 3px;
 	cursor: pointer;
 }
+
+
+body{
+    font-size: 25px;
+}

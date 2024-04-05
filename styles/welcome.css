@@ -65,4 +65,6 @@ button:hover{
     border-radius: 50%;
 }
 
-
+body{
+    font-size: 25px;
+}
