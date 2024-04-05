@@ -30,7 +30,6 @@
   <nav id="navbarPlaceholder"></nav>
   <button class="btn" onclick="history.back()"> <p> < </p></button>
 
-
     <div class="card text-center">
       <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
@@ -57,67 +56,14 @@
           <option value="low">Less Priority</option>
       </select>
       <input type="date" id="deadline">
-      <button id="note-submit">Add Task</button>
+      <button id="add-task">Add Task</button>
   </div>
     <ul class="list-group">
       <div class="task-list" id="task-list">   
-        <ul id="notes"></ul>
 
         <!-- Tasks will be added here dynamically -->
     </div>
-      
     </ul>
-    
-<!-- Code from w3collective -->
-<script>
-  const noteForm = document.getElementById("note-form");
-  const noteInput = document.getElementById("task-form");
-  const noteSubmit = document.getElementById("note-submit");
-  const notes = document.getElementById("notes");
-
-  let notesStorage = localStorage.getItem("notes")
-    ? JSON.parse(localStorage.getItem("notes"))
-    : [];
-
-  noteForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    notesStorage.push(noteInput.value);
-    localStorage.setItem("notes", JSON.stringify(notesStorage));
-    listBuilder(noteInput.value);
-    noteInput.value = "";
-  });
-
-  const listBuilder = (text) => {
-    const note = document.createElement("li");
-    note.innerHTML = text + ' <button onclick="deleteNote(this)">x</button>';
-    notes.appendChild(note);
-
-
-  };
-
-  const getNotes = JSON.parse(localStorage.getItem("notes"));
-  getNotes.forEach((note) => {
-    listBuilder(note);
-  });
-
-  const deleteNote = (btn) => {
-    let el = btn.parentNode;
-    const index = [...el.parentElement.children].indexOf(el);
-    notesStorage.splice(index, 1);
-    localStorage.setItem("notes", JSON.stringify(notesStorage));
-    el.remove();
-  };
-
-
-
-
-
-
-
-
-
-
-    </script>
     
     <!-- Your HTML Layout goes here -->
 
