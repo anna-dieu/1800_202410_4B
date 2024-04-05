@@ -67,7 +67,7 @@
     </div>
       
     </ul>
-    
+
 <!-- Code from w3collective -->
 <script>
   const noteForm = document.getElementById("note-form");
@@ -89,7 +89,7 @@
 
   const listBuilder = (text) => {
     const note = document.createElement("li");
-    note.innerHTML = text + ' <button onclick="deleteNote(this)">x</button>';
+    note.innerHTML = text + ' <button onclick="deleteNote">x</button>';
     notes.appendChild(note);
 
 
@@ -107,13 +107,6 @@
     localStorage.setItem("notes", JSON.stringify(notesStorage));
     el.remove();
   };
-
-
-
-
-
-
-
 
 
 
