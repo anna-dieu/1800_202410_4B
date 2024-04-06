@@ -64,3 +64,80 @@ button:hover{
 body{
     font-size: 25px;
 }
+
+.footer {
+    display:flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:beige;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    height: 7%;
+    
+}
+
+#last1{
+    color:brown;
+    font-size: 30px;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-left:200px;
+}
+
+#last2{
+    color:brown;
+    font-size: 30px;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-left:200px;
+}
+
+#last3{
+    color:brown;
+    font-size: 30px;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-left:200px;
+}
+
+#last4{
+    color:brown;
+    font-size: 30px;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-left:200px;
+}
+
+.btn {
+    background-color: rgb(93, 93, 206);
+    height: 60px;
+    width:60px;
+    border-radius: 70%;
+    color: azure;
+    font-size: 20px;
+}
+
+.btn p{
+    font-size: 30px;
+}
+
+button:hover{
+    background-color: rgb(93, 93, 206);
+    color:azure;
+}
+
+body{
+    font-size: 25px;
+}
+
+#calendar {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 15px;
+
+}
+
+
