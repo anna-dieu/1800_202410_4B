@@ -86,37 +86,6 @@ p{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
-#last1{
-    color:brown;
-    font-size: 30px;
-    padding-top: 5px;
-    margin-right: 5px;
-    margin-left:200px;
-}
-
-#last2{
-    color:brown;
-    font-size: 30px;
-    padding-top: 5px;
-    margin-right: 5px;
-    margin-left:200px;
-}
-
-#last3{
-    color:brown;
-    font-size: 30px;
-    padding-top: 5px;
-    margin-right: 5px;
-    margin-left:200px;
-}
-
-#last4{
-    color:brown;
-    font-size: 30px;
-    padding-top: 5px;
-    margin-right: 5px;
-    margin-left:200px;
-}
 
 .container{
     display: grid;
@@ -152,4 +121,15 @@ button:hover{
 
 body{
     font-size: 25px;
+}
+
+footer{
+    background-color: rgb(187, 223, 239);
+    font-size: 18px;
+    padding:20px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
