@@ -28,6 +28,9 @@ const myEvents = JSON.parse(localStorage.getItem('events')) || [
   ];
 
 
+  
+
+
   const calendar = new FullCalendar.Calendar(calendarEl, {
     customButtons: {
       customButton: {
@@ -257,6 +260,23 @@ const myEvents = JSON.parse(localStorage.getItem('events')) || [
     form.reset();
   });
 
+  const clearLatestEvent = () => {
+    if (myEvents.length > 0) {
+      const latestEvent = myEvents[myEvents.length - 1];
+      const calendarEvent = calendar.getEventById(latestEvent.id);
+      if (calendarEvent) {
+        const eventIndex = myEvents.findIndex(event => event.id === latestEvent.id);
+        myEvents.splice(eventIndex, 1);
+        localStorage.setItem('events', JSON.stringify(myEvents));
+        calendarEvent.remove();
+      }
+    }
+  };
+
+  // Event listener for the clear latest event button
+  document.getElementById('clear-latest-button').addEventListener('click', clearLatestEvent);
+  
+  calendar.render();
   
 
   myModal._element.addEventListener('hide.bs.modal', function () {
@@ -265,5 +285,7 @@ const myEvents = JSON.parse(localStorage.getItem('events')) || [
   });
 
 });
+
+
 
 
