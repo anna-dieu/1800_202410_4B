@@ -128,9 +128,6 @@ button:hover{
     color:azure;
 }
 
-body{
-    font-size: 25px;
-}
 
 #calendar {
     max-width: 1000px;
@@ -141,3 +138,7 @@ body{
 }
 
 
+
+body{
+    font-size: 25px;
+}
