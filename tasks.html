@@ -49,22 +49,26 @@
       </div>
     </div>
     <div class="task-form">
+      <input type="date" id="deadline" value="">
+      <i class="fas fa-calendar-alt"></i> <!-- Font Awesome calendar icon -->
+    </div>
       <input type="text" id="task" placeholder="Enter task...">
       <select id="priority">
           <option value="top">Top Priority</option>
           <option value="middle">Middle Priority</option>
           <option value="low">Less Priority</option>
       </select>
-      <input type="date" id="deadline">
+      <div class="deadline-wrapper">
       <button id="add-task">Add Task</button>
-  </div>
-    <ul class="list-group">
-      <div class="task-list" id="task-list">   
-
-        <!-- Tasks will be added here dynamically -->
     </div>
-    </ul>
     
+    <ul class="list-group">
+      <div thetasks>
+        <div class="task-list" id="task-list">   
+        </div>
+      </div>
+    </ul>
+    </div>
     <!-- Your HTML Layout goes here -->
 
 
