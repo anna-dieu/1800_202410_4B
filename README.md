@@ -1,14 +1,13 @@
 # Project Title
 
 ## 1. Project Description
-State your app in a nutshell, or one-sentence pitch. Give some elaboration on what the core features are.  
-This browser based web application to ... 
+This browser-based web application to increase your productivity is equipped with a tasks list, timer and calendar. 
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
 * ...
 * Hi, my name is Pranjal! 
-* Hi, my namie is Mitchell.
+* Hi, my name is Mitchell.
 * Hi, my name is Anna. 
 * ...
 * ...
@@ -20,27 +19,30 @@ List technologies (with version numbers), API's, icons, fonts, images, media or 
 * Firebase 8.0 (BAAS - Backend as a Service)
 * ...
 
-## 4. Complete setup/installion/usage
+## 4. Complete setup/installation/usage
 State what a user needs to do when they come to your project.  How do others start using your code or application?
 Here are the steps ...
-* ...
-* ...
+* Create an account.
+* Read the FAQ section for complete usage.
 * ...
 
 ## 5. Known Bugs and Limitations
 Here are some known bugs:
-* ...
-* ...
+* The navbar in the calendar is not fully functional. The dropdown menu does not open.
+* Tasks do not go to the completion page once marked as finished.
 * ...
 
 ## 6. Features for Future
 What we'd like to build in the future:
-* ...
-* ...
-* ...
+* Notification system.
+* Ability to categorize tasks (e.g., work, school, or tasks)
+* Analytics regarding timer 
 	
 ## 7. Contents of Folder
 Content of the project folder:
+* HTML 
+* scripts
+* CSS
 
 ```
  Top level of project folder: 
